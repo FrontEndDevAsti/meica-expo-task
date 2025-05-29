@@ -184,7 +184,7 @@ export const MeicaExpo = (): JSX.Element => {
             </div>
 
             {/* Navigation */}
-            <div className="flex flex-col w-[1371px] h-[41px] items-start gap-2.5 px-[249px] py-3.5 absolute top-[149px] left-[53px] bg-[#0889a5] rounded-lg relative">
+            <div className="flex flex-col w-[1371px] h-[41px] items-start gap-2.5 px-[249px] py-3.5 absolute top-[139px] left-[53px] bg-[#0889a5] rounded-lg relative">
               <div className="relative w-full h-[13px] flex flex-row items-center justify-start">
                 {navItems.map((item, index) => {
                   if (item === "CONFERENCE") {
@@ -222,65 +222,6 @@ export const MeicaExpo = (): JSX.Element => {
                     </Button>
                   );
                 })}
-                {/* Dropdown Overlay - outside nav items, full navbar width */}
-                {conferenceOpen && (
-                  <div
-                    className="absolute top-full z-50 flex"
-                    style={{
-                      left: 0,
-                      width: '1000px',
-                      marginRight: '153px', // aligns with navbar's left-[53px]
-                      minHeight: 140,
-                    }}
-                    onMouseEnter={() => setConferenceOpen(true)}
-                    onMouseLeave={() => setConferenceOpen(false)}
-                  >
-                    <div className="w-full bg-white shadow-xl rounded-md border flex p-0 mt-2 overflow-hidden">
-                      <div className="grid grid-cols-3 w-full">
-                        {/* First column: 1 item, vertically centered */}
-                        <div className="flex flex-col justify-center items-start h-full px-8 py-6">
-                          <div className="text-[#0889a5] font-bold text-[18px]">
-                            CONFERENCE
-                            <div className="font-normal text-[#0889a5] text-[13px] mt-1">
-                              MEICA EXPO 2025 Was The First<br />
-                              Instrumentation Control And Automation Expo In
-                            </div>
-                          </div>
-                        </div>
-                        {/* Second column: 2 items */}
-                        <div className="flex flex-col gap-4 px-8 py-6">
-                          {[1, 2].map((i) => (
-                            <div
-                              key={i}
-                              className="cursor-pointer transition-colors text-[#0889a5] font-bold text-[18px] hover:bg-[#e8f5fb] px-2 py-2 rounded"
-                            >
-                              CONFERENCE
-                              <div className="font-normal text-[#0889a5] text-[13px] mt-1">
-                                MEICA EXPO 2025 Was The First<br />
-                                Instrumentation Control And Automation Expo In
-                              </div>
-                            </div>
-                          ))}
-                        </div>
-                        {/* Third column: 2 items */}
-                        <div className="flex flex-col gap-4 px-8 py-6">
-                          {[3, 4].map((i) => (
-                            <div
-                              key={i}
-                              className="cursor-pointer transition-colors text-[#0889a5] font-bold text-[18px] hover:bg-[#e8f5fb] px-2 py-2 rounded"
-                            >
-                              CONFERENCE
-                              <div className="font-normal text-[#0889a5] text-[13px] mt-1">
-                                MEICA EXPO 2025 Was The First<br />
-                                Instrumentation Control And Automation Expo In
-                              </div>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                )}
               </div>
             </div>
           </div>
@@ -547,6 +488,61 @@ export const MeicaExpo = (): JSX.Element => {
               {/* More decorative elements */}
             </div>
           </div>
+
+          {/* Dropdown Overlay */}
+          {conferenceOpen && (
+            <div
+              className="absolute left-[79px] top-[212px] w-[1371px] z-30 flex"
+              style={{ minHeight: 140 }}
+              onMouseEnter={() => setConferenceOpen(true)}
+              onMouseLeave={() => setConferenceOpen(false)}
+            >
+              <div className="w-full bg-white shadow-xl rounded-md border flex p-0 overflow-hidden">
+                <div className="grid grid-cols-3 w-full">
+                  {/* First column: 1 item, vertically centered */}
+                  <div className="flex flex-col justify-center items-start h-full px-8 py-6">
+                    <div className="text-[#0889a5] font-bold text-[18px]">
+                      CONFERENCE
+                      <div className="font-normal text-[#0889a5] text-[13px] mt-1">
+                        MEICA EXPO 2025 Was The First<br />
+                        Instrumentation Control And Automation Expo In
+                      </div>
+                    </div>
+                  </div>
+                  {/* Second column: 2 items */}
+                  <div className="flex flex-col gap-4 px-8 py-6">
+                    {[1, 2].map((i) => (
+                      <div
+                        key={i}
+                        className="cursor-pointer transition-colors text-[#0889a5] font-bold text-[18px] hover:bg-[#e8f5fb] px-2 py-2 rounded"
+                      >
+                        CONFERENCE
+                        <div className="font-normal text-[#0889a5] text-[13px] mt-1">
+                          MEICA EXPO 2025 Was The First<br />
+                          Instrumentation Control And Automation Expo In
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                  {/* Third column: 2 items */}
+                  <div className="flex flex-col gap-4 px-8 py-6">
+                    {[3, 4].map((i) => (
+                      <div
+                        key={i}
+                        className="cursor-pointer transition-colors text-[#0889a5] font-bold text-[18px] hover:bg-[#e8f5fb] px-2 py-2 rounded"
+                      >
+                        CONFERENCE
+                        <div className="font-normal text-[#0889a5] text-[13px] mt-1">
+                          MEICA EXPO 2025 Was The First<br />
+                          Instrumentation Control And Automation Expo In
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
         </div>
       </div>
     );
@@ -598,11 +594,11 @@ export const MeicaExpo = (): JSX.Element => {
           <div className="w-full relative overflow-hidden">
             <img className="w-full rounded-lg my-4" src="/vector-3.png" alt="Banner" />
             {/* Overlay feature boxes at bottom right, as in large screen */}
-            <div className="absolute bottom-3 right-3 flex flex-col gap-1 w-1/2 pr-1 pb-1">
+            {/* <div className="absolute bottom-1 right-2 flex flex-col gap-1 pr-1 pb-1">
               {featureBoxes.map((feature, index) => (
                 <div
                   key={index}
-                  className="relative rounded-lg overflow-hidden h-8 flex items-center"
+                  className="relative rounded-lg overflow-hidden h-7 flex items-center"
                   style={{ backgroundImage: `url(${feature.imgSrc})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
                 >
                   <div className="absolute inset-0 bg-black bg-opacity-30 rounded-lg" />
@@ -611,7 +607,7 @@ export const MeicaExpo = (): JSX.Element => {
                   </div>
                 </div>
               ))}
-            </div>
+            </div> */}
           </div>
           <div className="flex flex-col items-center gap-2 mt-4">
             <div className="font-semibold text-[#0889a5] text-sm">SEP 16-18, 2025</div>
@@ -621,8 +617,7 @@ export const MeicaExpo = (): JSX.Element => {
         {/* Feature Boxes */}
         <div className="w-full flex flex-col gap-2 mb-4">
           {featureBoxes.map((feature, index) => (
-            <div key={index} className="w-full flex flex-row items-center gap-2 bg-[#0889a5] rounded-lg p-2">
-              <img className="w-16 h-16 rounded" src={feature.imgSrc} alt="Feature" />
+            <div key={index} className="w-full flex flex-row items-center gap-2 bg-[#0889a5] rounded-lg p-2"        style={{ backgroundImage: `url(${feature.imgSrc})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
               <div className="text-white text-base font-bold">{feature.title}</div>
             </div>
           ))}
