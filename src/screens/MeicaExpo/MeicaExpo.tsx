@@ -146,7 +146,7 @@ export const MeicaExpo = (): JSX.Element => {
                 <Card className="absolute w-[1456px] h-[170px] top-0 left-0 rounded-lg shadow-[0px_0px_4px_#737373]">
                   <CardContent className="p-0">
                     <div className="absolute w-[166px] h-[38px] top-[58px] left-[1258px] rounded-[10px] [background:linear-gradient(90deg,rgba(16,162,201,1)_0%,rgba(0,52,92,1)_100%)] flex items-center justify-center cursor-pointer">
-                      <div className="[font-family:'Inter',Helvetica] font-semibold text-white text-[16.4px] tracking-[0] leading-[15.4px] whitespace-nowrap">
+                      <div className="[font-family:'Inter',Helvetica] font-semibold text-white text-[16.4px] tracking-[0] leading-[15.4px] whitespace-nowrap px-4">
                         REGISTRATIONS
                       </div>
                     </div>
