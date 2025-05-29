@@ -501,9 +501,9 @@ export const MeicaExpo = (): JSX.Element => {
                 <div className="grid grid-cols-3 w-full">
                   {/* First column: 1 item, vertically centered */}
                   <div className="flex flex-col justify-center items-start h-full px-8 py-6">
-                    <div className="text-[#0889a5] font-bold text-[18px]">
+                    <div className="text-[#0889a5] font-bold text-[28px]">
                       CONFERENCE
-                      <div className="font-normal text-[#0889a5] text-[13px] mt-1">
+                      <div className="font-normal text-[#0889a5] text-[15px] mt-1">
                         MEICA EXPO 2025 Was The First<br />
                         Instrumentation Control And Automation Expo In
                       </div>
